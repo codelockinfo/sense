@@ -1,0 +1,110 @@
+{% comment %}
+  Shopify Wishlist
+  Usage:
+    - Markup: {%- render 'icon-heart', class: product -%}
+    - Place this snippet inside your existing product card snippet
+
+  Parameters:
+    - class: Add a css class for custom styling (optional)
+{% endcomment %}
+<!-- <svg class="icon icon-accordion color-foreground-text" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 5.2393L8.5149 3.77392C6.79996 2.08174 4.01945 2.08174 2.30451 3.77392C0.589562 5.4661 0.589563 8.2097 2.30451 9.90188L10 17.4952L17.6955 9.90188C19.4104 8.2097 19.4104 5.4661 17.6955 3.77392C15.9805 2.08174 13.2 2.08174 11.4851 3.77392L10 5.2393ZM10.765 3.06343C12.8777 0.978857 16.3029 0.978856 18.4155 3.06343C20.5282 5.148 20.5282 8.52779 18.4155 10.6124L10.72 18.2057C10.3224 18.5981 9.67763 18.5981 9.27996 18.2057L1.58446 10.6124C-0.528154 8.52779 -0.528154 5.14801 1.58446 3.06343C3.69708 0.978859 7.12233 0.978858 9.23495 3.06343L10 3.81832L10.765 3.06343Z" fill-rule="evenodd"></path></svg> -->
+
+
+<svg class="icon icon-heart {{ class -}}" viewBox="0 0 290 256" xmlns="http://www.w3.org/2000/svg"><path d="M258.844192 127.790368L145 241.63456 31.1558082 127.790368c-26.9461761-26.946176-26.9461761-70.6345598 0-97.5807359 26.9461762-26.94617613 70.6345598-26.94617613 97.5807358 0L145 46.4730881l16.263456-16.263456c26.946176-26.94617613 70.63456-26.94617613 97.580736 0 26.946176 26.9461761 26.946176 70.6345599 0 97.5807359z" stroke="#000" stroke-width="20" fill="red" fill-rule="evenodd"/></svg>
+<style>
+  .icon {
+    fill: transparent ;
+    stroke: #000000;
+    transition: fill 0.3s ease;
+}
+  .icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+/*   fill: currentColor; */
+  }
+  .no-svg .icon {
+    display: none; }
+
+svg.icon:not(.icon--full-color) circle,
+svg.icon:not(.icon--full-color) ellipse,
+svg.icon:not(.icon--full-color) g,
+svg.icon:not(.icon--full-color) line,
+svg.icon:not(.icon--full-color) path,
+svg.icon:not(.icon--full-color) polygon,
+svg.icon:not(.icon--full-color) polyline,
+svg.icon:not(.icon--full-color) rect,
+symbol.icon:not(.icon--full-color) circle,
+symbol.icon:not(.icon--full-color) ellipse,
+symbol.icon:not(.icon--full-color) g,
+symbol.icon:not(.icon--full-color) line,
+symbol.icon:not(.icon--full-color) path,
+symbol.icon:not(.icon--full-color) polygon,
+symbol.icon:not(.icon--full-color) polyline,
+symbol.icon:not(.icon--full-color) rect {
+  fill: inherit;
+  stroke: inherit; }
+svg.icon:not(.icon--full-color) .icon-error__symbol,
+symbol.icon:not(.icon--full-color) .icon-error__symbol {
+  fill: #ffffff; }
+
+/*============================================================================
+  A generic way to visually hide content while
+  remaining accessible to screen readers (h5bp.com)
+==============================================================================*/
+.no-svg .icon__fallback-text {
+  position: static !important;
+  overflow: inherit;
+  clip: none;
+  height: auto;
+  width: auto;
+  margin: 0; }
+
+/*================ Payment Icons ================*/
+.payment-icons {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default; }
+  @media only screen and (max-width: 749px) {
+    .payment-icons {
+      line-height: 40px; } }
+  .payment-icons .icon {
+    width: 38px;
+    height: 24px;
+    fill: inherit; }
+
+/*================ Social Icons ================*/
+.social-icons .icon {
+  width: 23px;
+  height: 23px; }
+  @media only screen and (min-width: 750px) {
+    .social-icons .icon {
+      width: 25px;
+      height: 25px; } }
+  .social-icons .icon.icon--wide {
+    width: 40px; }
+
+/*  .active .icon.icon-heart {
+  display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  svg.icon:not(.icon--full-color) circle, svg.icon:not(.icon--full-color) ellipse, svg.icon:not(.icon--full-color) g, svg.icon:not(.icon--full-color) line, svg.icon:not(.icon--full-color) path, svg.icon:not(.icon--full-color) polygon, svg.icon:not(.icon--full-color) polyline, svg.icon:not(.icon--full-color) rect, symbol.icon:not(.icon--full-color) circle, symbol.icon:not(.icon--full-color) ellipse, symbol.icon:not(.icon--full-color) g, symbol.icon:not(.icon--full-color) line, symbol.icon:not(.icon--full-color) path, symbol.icon:not(.icon--full-color) polygon, symbol.icon:not(.icon--full-color) polyline, symbol.icon:not(.icon--full-color) rect {
+    fill: transparent;
+    stroke: black;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+} */
+/* .icon{
+display: inline-block;
+     width: 20px; 
+     height: 20px; 
+    vertical-align: middle;
+} */
+</style>

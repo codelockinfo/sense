@@ -1,0 +1,58 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+<style>
+li.wishlist_flex.product-card {
+    flex: 0 0 25%;
+    max-width: calc(25% - 10px);
+    margin: 0 20px;
+}
+.wishlist__grid.flex.container.loaded {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 0 -20px; */
+}
+  .product-card .card-wrapper{
+      height: unest; 
+
+  }
+</style>
+{% comment %}
+  Shopify Wishlist
+  Usage:
+    - Replace the snippet name ('product-card') with your existing product card snippet
+    - Pass the product object as a snippet variable named 'product'
+{% endcomment %}
+<div id="ProductGridContainer">
+    <div class="collection page-width">
+      <div class="loading-overlay gradient"></div>
+ {% assign lazy_load = false %}
+ {% assign media_aspect_ratio = 'adapt' %}  
+      {% assign show_secondary_image = 'true' %}   
+      {% assign show_vendor = 'false' %}   
+      {% assign show_rating = 'false' %}   
+   
+      <ul id="product-grid" data-id="{{ section.id }}" class=" grid grid--2-col product-grid {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %} {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %} {% endif %} custom_flex">
+        <li class="wishlist_flex product-card">
+          {%- render 'card-product', card_product: product,
+                media_aspect_ratio:media_aspect_ratio,
+                  show_secondary_image: show_secondary_image,
+                  show_vendor: show_vendor,
+                  show_rating: show_rating,
+                  lazy_load: lazy_load
+          -%}
+        </li>
+      </ul>
+  </div>
+</div>
+{% schema %}
+  {
+    "templates": ["product"]
+
+  }
+{% endschema %}
