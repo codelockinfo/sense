@@ -1,10 +1,63 @@
 {
-    "sections": {
-      "main": {
-        "type": "multicolumn"
+  "sections": {
+    "main": {
+      "type": "multicolumn",
+      "blocks": {
+        "7a2f7b35-44c0-4a2c-b764-69f6d3ab8d31": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/web_Vir4.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "4a7d09d4-26e5-4cbc-a0f7-1c85f4a8769d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/house-in-provence-1.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1429992c-558a-4dad-a308-946231a8c03f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/webV_BW_FL_ER_01_54285_Master8-cropped.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "7a2f7b35-44c0-4a2c-b764-69f6d3ab8d31",
+        "4a7d09d4-26e5-4cbc-a0f7-1c85f4a8769d",
+        "1429992c-558a-4dad-a308-946231a8c03f"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
